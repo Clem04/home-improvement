@@ -44,7 +44,7 @@ export default function Navbar() {
   			<AddBtn>NEW PROJECT</AddBtn>
   		</LeftDiv>
   		<RightDiv>
-  			<SignOutBtn>NEW PROJECT</SignOutBtn>
+  			<SignOutBtn>SIGN OUT</SignOutBtn>
   		</RightDiv>
   	</Nav>
   )
