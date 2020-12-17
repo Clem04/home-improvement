@@ -1,5 +1,13 @@
 import React from "react"
 
+// Components
+import Layout from "../components/Layout"
+import Navbar from "../components/Navbar"
+
 export default function Home() {
-  return <div>Hello world! Home improvement project.</div>
+  return (
+  	<Layout>
+  		<Navbar />
+  	</Layout>
+  )
 }
