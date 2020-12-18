@@ -1,0 +1,11 @@
+.completed {
+	background-color: #4CAF50;
+}
+
+.actual {
+	color: #4CAF50;
+}
+
+.hide {
+	visibility: hidden;
+}
