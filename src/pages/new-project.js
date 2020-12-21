@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { navigate } from 'gatsby';
+// import { navigate } from 'gatsby';
 
 // Components
 import Layout from "../components/Layout"
@@ -11,7 +11,8 @@ export default function NewProject() {
 		clientName: '',
 		description: '',
 		estimatedEffort: '',
-		actualEffort: ''
+		actualEffort: '',
+		myData: 'yes'
 	});
 
 	const handleChange = (event) => {
@@ -41,9 +42,11 @@ export default function NewProject() {
 				'Content-type': 'application/json; charset=UTF-8',
 			}
 		})
-  			.then(() => navigate("/"))
+			.then((response) => response.json())
+  			.then((response) => console.log(response))
+  			// .then(() => navigate("/"))
   			.catch((error) => {
-        		console.error("Cannoe add new project", error);
+        		console.error("Cannot add new project", error);
     		});
     }
 
@@ -64,7 +67,8 @@ export default function NewProject() {
 		        </label>
 		        <label>
 		          Description:
-		          <input type="text" name="description" onChange={handleChange} />
+		          <textarea rows="10" type="text" name="description" onChange={handleChange}>
+		          </textarea>
 		        </label>
 		        <input type="submit" value="Submit" />
 		    </form>

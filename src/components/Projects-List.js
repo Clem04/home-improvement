@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 
 // Import component
@@ -13,42 +13,58 @@ const GridList = styled.div`
   row-gap: 16px;
 `
 
-const projects = [
-  {
-    projectTitle: 'Project Title',
-    clientName: 'Michel Jamati',
-    dateCreated: '12 days ago',
-    status: 'STARTED',
-    estimatedEffortLevel: 6,
-    actualEffortLevel: 0,
-    description: 'This is a desciption of project 1'
-  },
-  {
-    projectTitle: 'Project Title',
-    clientName: 'Michel Jamati',
-    dateCreated: '12 days ago',
-    status: 'COMPLETED',
-    estimatedEffortLevel: 8,
-    actualEffortLevel: 10,
-    description: 'This is a description of project 2'
-    }
-]
 
 const ProjectsList = () => {
 
+  const [projectList, setProjectList] = useState(
+    [
+      {
+        id: 1,
+        projectTitle: 'Project Title',
+        clientName: 'Michel Jamati',
+        dateCreated: '12 days ago',
+        completed: false,
+        estimatedEffortLevel: 6,
+        actualEffortLevel: 0,
+        description: 'This is a desciption of project 1'
+      },
+      {
+        id: 2,
+        projectTitle: 'Project Title',
+        clientName: 'Michel Jamati',
+        dateCreated: '12 days ago',
+        completed: true,
+        estimatedEffortLevel: 8,
+        actualEffortLevel: 10,
+        description: 'This is a description of project 2'
+      }
+    ]
+  )
+
+  console.log(projectList)
+
+  const handleChange = (id) => {
+    console.log(id)
+  }
+
+
+  const list = projectList.map((project, id) => (
+    <ProjectCard 
+      key={id}
+      title={project.projectTitle}
+      client={project.clientName}
+      date={project.dateCreated}
+      completed={project.completed}
+      estimate={project.estimatedEffortLevel}
+      actual={project.actualEffortLevel}
+      description={project.description}
+      handleChange={handleChange}
+    />
+  ))
+
   return (
   	<GridList>
-        {projects.map((project, index) => (
-          <ProjectCard 
-            title={project.projectTitle}
-            client={project.clientName}
-            date={project.dateCreated}
-            status={project.status}
-            estimate={project.estimatedEffortLevel}
-            actual={project.actualEffortLevel}
-            description={project.description}
-          />
-        ))}
+      {list}
     </GridList>
   )
 }

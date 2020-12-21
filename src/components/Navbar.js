@@ -41,7 +41,9 @@ const Navbar = () => {
   return (
   	<Nav>
   		<LeftDiv>
-  			<h4>HOME IPROVEMENT</h4>
+        <Link to="/">
+           <h4 style={{color: "white"}}>HOME IPROVEMENT</h4>
+        </Link>
         <Link to="/new-project">
   			   <AddBtn>NEW PROJECT</AddBtn>
         </Link>

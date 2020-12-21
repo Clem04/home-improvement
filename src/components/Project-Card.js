@@ -9,14 +9,27 @@ const Card = styled.div`
   border: 3px solid black;
 `
 
-const StatusBtn = styled.button`
+const CompletedBtn = styled.button`
   color: black;
-  background-color: white;
   border: none;
 `
 
 
-const ProjectCard = ({title, client, date, description, status, estimate, actual}) => {
+const ProjectCard = ({title, client, date, description, completed, estimate, actual}) => {
+
+  const statusBtn = () => {
+    if(completed === true){
+
+      return <CompletedBtn className={styles.completed}>
+                COMPLETED
+             </CompletedBtn>
+    } else{
+
+      return <CompletedBtn className={styles.started}>
+                STARTED
+             </CompletedBtn>
+    }
+  }
 
   return (
     <Card>
@@ -24,13 +37,11 @@ const ProjectCard = ({title, client, date, description, status, estimate, actual
       <p>{client}</p>
       <p>{date}</p>
       <p>{description}</p>
-      <StatusBtn className={status === "COMPLETED" ? styles.completed : ""} disabled>
-        {status}
-      </StatusBtn>
+      {statusBtn()}
       <p>{estimate}</p>
       <p className={actual > 0 ? styles.actual : styles.hide}>{actual}</p>
       <button>delete</button>
-      <button>edit</button>
+      <button onChange={() => completed.handleChange(completed.project.id)}>edit</button>
     </Card>
   )
 }
