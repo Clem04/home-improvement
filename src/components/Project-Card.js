@@ -26,6 +26,7 @@ const Container = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
   border-bottom: 1px solid grey;
  `
@@ -40,6 +41,9 @@ const ProjectDescription = styled(ProjectTitle)`
  const ProjectText = styled.div`
   width: 60%;
   padding-right: 24px;
+  @media (max-width: 414px) {
+    width: 100%;
+  }
  `
 
  const ProjectLevelOfEffort = styled(ProjectTitle)`
@@ -47,6 +51,9 @@ const ProjectDescription = styled(ProjectTitle)`
   flex-wrap: wrap;
   align-items: flex-start;
   border-bottom: none;
+  @media (max-width: 414px) {
+    width: 100%;
+  }
  `
  const EstimateBox = styled.div`
   width: 50%;

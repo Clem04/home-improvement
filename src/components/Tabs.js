@@ -14,12 +14,14 @@ const ListsContainer = styled.div`
 
 const ContentDiv = styled.div`
   width: 100%;
-
   min-height: 30vh;
   padding: 8px 32px;
   display: grid;
   grid-template-rows: ;
   row-gap: 16px;
+  @media (max-width: 414px) {
+    padding: 0;
+  }
 `;
 
 

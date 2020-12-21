@@ -10,6 +10,9 @@ const GridList = styled.div`
   height: auto;
   background-color: white;
   margin: 32px 0 ;
+  @media (max-width: 414px) {
+    width: 90%;
+  }
 `
 const Tab = styled.div`
   width: 100%;
