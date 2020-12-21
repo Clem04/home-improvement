@@ -10,6 +10,9 @@ const GridList = styled.div`
   height: auto;
   background-color: white;
   margin: 32px 0 ;
+  @media only screen and (max-width: 1024px) and (min-width: 320px) {
+    width: 90%;
+  }
 `
 const Tab = styled.div`
   width: 100%;

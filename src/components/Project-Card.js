@@ -26,6 +26,7 @@ const Container = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
   border-bottom: 1px solid grey;
  `
@@ -36,10 +37,17 @@ const Container = styled.div`
 const ProjectDescription = styled(ProjectTitle)`
   align-items: flex-start;
   border-bottom: none;
+  flex-wrap: nowrap;
+  @media only screen and (max-width: 1024px) and (min-width: 320px) {
+    flex-wrap: wrap;
+  }
  `
  const ProjectText = styled.div`
   width: 60%;
   padding-right: 24px;
+  @media only screen and (max-width: 1024px) and (min-width: 320px) {
+    width: 100%;
+  }
  `
 
  const ProjectLevelOfEffort = styled(ProjectTitle)`
@@ -47,12 +55,14 @@ const ProjectDescription = styled(ProjectTitle)`
   flex-wrap: wrap;
   align-items: flex-start;
   border-bottom: none;
+  @media only screen and (max-width: 1024px) and (min-width: 320px) {
+    width: 100%;
+  }
  `
  const EstimateBox = styled.div`
   width: 50%;
   border: 1px solid black;
  `
-
 
 const CompletedBtn = styled.button`
   width: 100%;
