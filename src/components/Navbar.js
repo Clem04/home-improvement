@@ -41,6 +41,11 @@ const AddBtn = styled.button`
   border-radius: 4px;
   border: none;
 
+  &:hover {
+    background-color: white;
+    color: red;
+  }
+
   @media (max-width: 414px) {
     display: none;
   }
