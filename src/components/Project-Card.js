@@ -37,11 +37,15 @@ const Container = styled.div`
 const ProjectDescription = styled(ProjectTitle)`
   align-items: flex-start;
   border-bottom: none;
+  flex-wrap: nowrap;
+  @media only screen and (max-width: 1024px) and (min-width: 320px) {
+    flex-wrap: wrap;
+  }
  `
  const ProjectText = styled.div`
   width: 60%;
   padding-right: 24px;
-  @media (max-width: 414px) {
+  @media only screen and (max-width: 1024px) and (min-width: 320px) {
     width: 100%;
   }
  `
@@ -51,7 +55,7 @@ const ProjectDescription = styled(ProjectTitle)`
   flex-wrap: wrap;
   align-items: flex-start;
   border-bottom: none;
-  @media (max-width: 414px) {
+  @media only screen and (max-width: 1024px) and (min-width: 320px) {
     width: 100%;
   }
  `
@@ -59,7 +63,6 @@ const ProjectDescription = styled(ProjectTitle)`
   width: 50%;
   border: 1px solid black;
  `
-
 
 const CompletedBtn = styled.button`
   width: 100%;

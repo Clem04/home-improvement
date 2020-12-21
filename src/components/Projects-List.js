@@ -10,7 +10,7 @@ const GridList = styled.div`
   height: auto;
   background-color: white;
   margin: 32px 0 ;
-  @media (max-width: 414px) {
+  @media only screen and (max-width: 1024px) and (min-width: 320px) {
     width: 90%;
   }
 `
