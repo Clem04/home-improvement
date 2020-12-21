@@ -6,14 +6,58 @@ import styled from "styled-components"
 // Components
 import Layout from "../components/Layout"
 
-const FormContainer = styled.div`
-  width: 80%;
-  min-height: 92vh;
-  background-color: pink;
+const Form = styled.form`
+  width: 50%;
+  height: auto;
+  margin: 16px;
+  background-color: white;
   display: flex;
+  flex-wrap: wrap;
+  border-radius: 2px;
+  justify-content: center;
   align-items: center;
+  padding: 16px 32px;
+  box-shadow: 1px 3px 19px rgba(0, 0, 0, 0.19);
+`
+const FormSection = styled.div`
+	width: 80%;
+`
+const Label = styled.p`
+	width: 100%;
+	font-size: 18px;
+	margin: 12px 0 8px 0;
+	text-align: start;
 `
 
+const Input = styled.input`
+	width: 100%;
+	height: 40px;
+	text-align: start;
+	padding: 0;
+	border: 1px solid blue;
+	border-radius: 2px;
+`
+
+const DescriptionBox = styled.textarea`
+	width: 100%;
+	height: 130px;
+	text-align: start;
+	border: 1px solid blue;
+	border-radius: 2px;
+	padding: 0;
+`
+const SubmitBtn = styled.input.attrs({ 
+  type: 'submit',
+  value: 'Submit'
+})`
+  width: 100%;
+  padding: 16px 0;
+  margin-top: 16px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 2px;
+`
 export default function NewProject() {
 
 	const [projectForm, setProjectForm] = useState({
@@ -62,28 +106,41 @@ export default function NewProject() {
 
   	return (
 		<Layout>
-			<FormContainer>
-	  			<form onSubmit={handleSubmit}>
-			        <label>
-			          Project Title:
-			          <input type="text" name="projectTitle" onChange={handleChange} />
-			        </label>
-			        <label>
-			          Client Name:
-			          <input type="text" name="clientName" onChange={handleChange} />
-			        </label>
-			        <label>
-			          Estimated Level of Effort:
-			          <input type="text" name="estimatedEffort" onChange={handleChange} />
-			        </label>
-			        <label>
-			          Description:
-			          <textarea rows="10" type="text" name="description" onChange={handleChange}>
-			          </textarea>
-			        </label>
-			        <input type="submit" value="Submit" />
-			    </form>
-			</FormContainer>
+			
+	  			<Form onSubmit={handleSubmit}>
+	  				<FormSection>
+	  					<h1 style={{margin: "0"}}>Create Project</h1>
+	  				</FormSection>
+	  				<FormSection>
+				        <label>
+					        <Label>Project Title:</Label>
+					        <Input type="text" name="projectTitle" onChange={handleChange} />
+				        </label>
+	  				</FormSection>
+	  				<FormSection>
+				        <label>
+					        <Label>Client Name:</Label>
+					        <Input type="text" name="clientName" onChange={handleChange} />
+				        </label>
+	  				</FormSection>
+	  				<FormSection>
+				        <label>
+					        <Label>Estimated level of effort:</Label>
+					        <Input type="text" name="estimatedEffort" onChange={handleChange} />
+				        </label>
+	  				</FormSection>
+	  				<FormSection>
+				        <label>
+					        <Label>Description:</Label>
+					        <DescriptionBox rows="10" type="text" name="description" onChange={handleChange}>
+					        </DescriptionBox>
+				        </label>
+	  				</FormSection>
+	  				<FormSection>
+			        	<SubmitBtn />
+	  				</FormSection>
+			    </Form>
+			
   		</Layout>
 	);
 }
