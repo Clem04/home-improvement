@@ -14,7 +14,7 @@ const ListsContainer = styled.div`
 
 const ContentDiv = styled.div`
   width: 100%;
-  height: auto;
+
   min-height: 30vh;
   padding: 8px 32px;
   border: 1px solid red;

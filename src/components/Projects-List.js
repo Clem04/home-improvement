@@ -7,7 +7,7 @@ import Tabs from './Tabs'
 
 const GridList = styled.div`
   width: 80%;
-  height auto;
+  height: auto;
   background-color: pink;
 `
 const Tab = styled.div`
@@ -166,6 +166,7 @@ const ProjectsList = () => {
 
   return (
   	<GridList>
+    <div>
       <Tabs>
         <Tab label="STARTED">
           {startedList}
@@ -174,6 +175,7 @@ const ProjectsList = () => {
           {completedList}
         </Tab>
       </Tabs>
+    </div>
     </GridList>
   )
 }

@@ -1,8 +1,18 @@
 import React, { useState } from 'react';
+import styled from "styled-components"
+
 // import { navigate } from 'gatsby';
 
 // Components
 import Layout from "../components/Layout"
+
+const FormContainer = styled.div`
+  width: 80%;
+  min-height: 92vh;
+  background-color: pink;
+  display: flex;
+  align-items: center;
+`
 
 export default function NewProject() {
 
@@ -52,26 +62,28 @@ export default function NewProject() {
 
   	return (
 		<Layout>
-  			<form onSubmit={handleSubmit}>
-		        <label>
-		          Project Title:
-		          <input type="text" name="projectTitle" onChange={handleChange} />
-		        </label>
-		        <label>
-		          Client Name:
-		          <input type="text" name="clientName" onChange={handleChange} />
-		        </label>
-		        <label>
-		          Estimated Level of Effort:
-		          <input type="text" name="estimatedEffort" onChange={handleChange} />
-		        </label>
-		        <label>
-		          Description:
-		          <textarea rows="10" type="text" name="description" onChange={handleChange}>
-		          </textarea>
-		        </label>
-		        <input type="submit" value="Submit" />
-		    </form>
+			<FormContainer>
+	  			<form onSubmit={handleSubmit}>
+			        <label>
+			          Project Title:
+			          <input type="text" name="projectTitle" onChange={handleChange} />
+			        </label>
+			        <label>
+			          Client Name:
+			          <input type="text" name="clientName" onChange={handleChange} />
+			        </label>
+			        <label>
+			          Estimated Level of Effort:
+			          <input type="text" name="estimatedEffort" onChange={handleChange} />
+			        </label>
+			        <label>
+			          Description:
+			          <textarea rows="10" type="text" name="description" onChange={handleChange}>
+			          </textarea>
+			        </label>
+			        <input type="submit" value="Submit" />
+			    </form>
+			</FormContainer>
   		</Layout>
 	);
 }

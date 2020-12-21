@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
 
 const ContentContainer = styled.div`
   width: 100%;
-  height: 92vh;
+  height: auto;
   background-color: orange;
   display: flex;
   justify-content: center;
