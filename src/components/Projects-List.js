@@ -1,17 +1,19 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 
-// Import component
+// Import components
 import ProjectCard from "./Project-Card"
+import Tabs from './Tabs'
 
 const GridList = styled.div`
   width: 80%;
   height auto;
   background-color: pink;
-  display: grid;
-  grid-template-rows: 1fr;
-  row-gap: 16px;
 `
+const Tab = styled.div`
+  width: 100%;
+  height: auto;
+`;
 
 
 const ProjectsList = () => {
@@ -84,8 +86,14 @@ const ProjectsList = () => {
 
   return (
   	<GridList>
-      {completedList}
-      {startedList}
+      <Tabs>
+        <Tab label="STARTED">
+          {startedList}
+        </Tab>
+        <Tab label="COMPLETED">
+          {completedList}
+        </Tab>
+      </Tabs>
     </GridList>
   )
 }
