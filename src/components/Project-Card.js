@@ -1,5 +1,11 @@
 import React from "react"
 import styled from "styled-components"
+import { Icon, InlineIcon } from '@iconify/react';
+
+import accountIcon from '@iconify-icons/mdi/account';
+import clockTimeNineOutline from '@iconify-icons/mdi/clock-time-nine-outline';
+
+
 
 import styles from './Card.module.css'
 
@@ -65,6 +71,14 @@ const StartedBtn = styled(CompletedBtn)`
   border: 1px solid red;
   color: red;
 `
+const Button = styled.button`
+  width: 36%;
+  padding: 4px 0;
+  background-color: white;
+  color: blue;
+  border: 1px solid blue;
+  border-radius: 2px;
+`
 
 
 const ProjectCard = ({title, client, date, description, completed, estimate, actual}) => {
@@ -89,13 +103,17 @@ const ProjectCard = ({title, client, date, description, completed, estimate, act
         <ProjectTitle>
         	<h2>{title}</h2>
           <div style={{width: "50%", display: "flex", justifyContent: "flex-end"}}>
-            <button>delete</button>
-            <button>edit</button>
+            <Button>delete</Button>
+            <Button style={{marginLeft: "16px"}}>edit</Button>
           </div>
         </ProjectTitle>
         <ProjectClient>
-          <p>{client}</p>
-          <p>{date}</p>
+          <div>
+            <p><Icon icon={accountIcon} style={{marginBottom: "-3px"}}/><span>{client}</span></p>
+          </div>
+          <div style={{marginLeft: "16px"}}>
+            <p><Icon icon={clockTimeNineOutline} style={{marginBottom: "-3px"}}/><span>{date}</span></p>
+          </div>
         </ProjectClient>
         <ProjectDescription>
           <ProjectText>
