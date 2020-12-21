@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
 
 // Import components
@@ -22,7 +22,7 @@ const Tab = styled.div`
 
 const ProjectsList = () => {
 
-  const [projectList, setProjectList] = useState(
+  const projects = 
     [
       {
         id: 1,
@@ -125,20 +125,19 @@ const ProjectsList = () => {
         description: 'Nulla excepteur et officia id id qui ut nisi non ex reprehenderit cupidatat laboris. Qui labore in ullamco qui aliquip duis anim adipisicing magna veniam aliqua qui consectetur mollit magna nisi elit. Ut esse aute esse pariatur voluptate commodo elit adipisicing eu sit. Ad dolor irure anim culpa anim velit dolore reprehenderit excepteur aliquip aliquip esse nisi. Voluptate proident non consequat fugiat est nisi proident dolor cupidatat irure occaecat eiusmod veniam proident exercitation.'
       }
     ]
-  )
 
-  console.log(projectList)
+  console.log(projects)
 
   // const handleCompleted = (id) => {
   //   alert('test test')
   //   console.log(id)
   // }
 
-  let projectsCompleted = projectList.filter(project => {
+  let projectsCompleted = projects.filter(project => {
       return project.completed === true;  
   }) ;
 
-  let projectsStarted = projectList.filter(project => {
+  let projectsStarted = projects.filter(project => {
       return project.completed === false;  
   }) ;
 
