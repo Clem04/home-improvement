@@ -72,10 +72,19 @@ const CompletedBtn = styled.button`
   border: 1px solid green;
   padding: 8px 0;
   border-radius: 2px;
+
+  &:hover {
+    background-color: green;
+    color: white;
+  }
 `
 const StartedBtn = styled(CompletedBtn)`
   border: 1px solid red;
   color: red;
+
+  &:hover {
+    background-color: red;
+  }
 `
 const Button = styled.button`
   width: 36%;
