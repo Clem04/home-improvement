@@ -48,8 +48,28 @@ const ProjectsList = () => {
   //   console.log(id)
   // }
 
+  let projectsCompleted = projectList.filter(project => {
+      return project.completed === true;  
+  }) ;
 
-  const list = projectList.map((project, id) => (
+  let projectsStarted = projectList.filter(project => {
+      return project.completed === false;  
+  }) ;
+
+  const completedList = projectsCompleted.map((project, id) => (
+    <ProjectCard 
+      key={id}
+      title={project.projectTitle}
+      client={project.clientName}
+      date={project.dateCreated}
+      completed={project.completed}
+      estimate={project.estimatedEffortLevel}
+      actual={project.actualEffortLevel}
+      description={project.description}
+    />
+  ))
+
+  const startedList = projectsStarted.map((project, id) => (
     <ProjectCard 
       key={id}
       title={project.projectTitle}
@@ -64,7 +84,8 @@ const ProjectsList = () => {
 
   return (
   	<GridList>
-      {list}
+      {completedList}
+      {startedList}
     </GridList>
   )
 }
