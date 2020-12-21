@@ -1,7 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 
-// import styles from './Navbar.module.css'
+import { FiAlignCenter } from "react-icons/fi";
+
+import styles from './Navbar.module.css'
 
 import { Link } from "gatsby"
 
@@ -13,6 +15,7 @@ const Nav = styled.div`
   padding: 0 24px;
   background-color: blue;
   color: white;
+  position: relative;
 `
 
 const LeftDiv = styled.div`
@@ -24,6 +27,9 @@ const LeftDiv = styled.div`
 
 const RightDiv = styled(LeftDiv)`
   justify-content: flex-end;
+  @media (max-width: 414px) {
+    width: 10%;
+  }
 `
 
 const AddBtn = styled.button`
@@ -34,6 +40,7 @@ const AddBtn = styled.button`
   padding: 8px 32px;
   border-radius: 4px;
   border: none;
+
   @media (max-width: 414px) {
     display: none;
   }
@@ -46,17 +53,18 @@ const SignOutBtn = styled(AddBtn)`
 const Navbar = () => {
   return (
   	<Nav>
-  		<LeftDiv>
-        <Link to="/">
-           <h4 style={{color: "white"}}>HOME IPROVEMENT</h4>
-        </Link>
-        <Link to="/new-project">
-  			   <AddBtn>NEW PROJECT</AddBtn>
-        </Link>
-  		</LeftDiv>
-  		<RightDiv>
-  			<SignOutBtn>SIGN OUT</SignOutBtn>
-  		</RightDiv>
+    		<LeftDiv>
+          <Link to="/">
+             <h4 style={{color: "white"}}>HOME IPROVEMENT</h4>
+          </Link>
+          <Link to="/new-project">
+    			   <AddBtn>NEW PROJECT</AddBtn>
+          </Link>
+    		</LeftDiv>
+    		<RightDiv>
+          <FiAlignCenter size="2x" className={styles.burgerIcon} />
+    			<SignOutBtn>SIGN OUT</SignOutBtn>
+    		</RightDiv>
   	</Nav>
   )
 }
