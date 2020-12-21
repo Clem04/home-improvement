@@ -20,12 +20,12 @@ const ProjectCard = ({title, client, date, description, completed, estimate, act
   const statusBtn = () => {
     if(completed === true){
 
-      return <CompletedBtn className={styles.completed}>
+      return <CompletedBtn className={styles.completed} onClick={() => alert('STARTED')}>
                 COMPLETED
              </CompletedBtn>
     } else{
 
-      return <CompletedBtn className={styles.started}>
+      return <CompletedBtn className={styles.started} onClick={() => alert('COMPLETED')}>
                 STARTED
              </CompletedBtn>
     }
@@ -41,7 +41,7 @@ const ProjectCard = ({title, client, date, description, completed, estimate, act
       <p>{estimate}</p>
       <p className={actual > 0 ? styles.actual : styles.hide}>{actual}</p>
       <button>delete</button>
-      <button onChange={() => completed.handleChange(completed.project.id)}>edit</button>
+      <button>edit</button>
     </Card>
   )
 }

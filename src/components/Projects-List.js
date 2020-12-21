@@ -43,9 +43,10 @@ const ProjectsList = () => {
 
   console.log(projectList)
 
-  const handleChange = (id) => {
-    console.log(id)
-  }
+  // const handleCompleted = (id) => {
+  //   alert('test test')
+  //   console.log(id)
+  // }
 
 
   const list = projectList.map((project, id) => (
@@ -58,7 +59,6 @@ const ProjectsList = () => {
       estimate={project.estimatedEffortLevel}
       actual={project.actualEffortLevel}
       description={project.description}
-      handleChange={handleChange}
     />
   ))
 
