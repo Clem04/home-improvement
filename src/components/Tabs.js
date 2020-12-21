@@ -17,9 +17,9 @@ const ContentDiv = styled.div`
 
   min-height: 30vh;
   padding: 8px 32px;
-  border: 1px solid red;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-rows: ;
+  row-gap: 16px;
 `;
 
 

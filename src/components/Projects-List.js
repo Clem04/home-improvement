@@ -6,9 +6,10 @@ import ProjectCard from "./Project-Card"
 import Tabs from './Tabs'
 
 const GridList = styled.div`
-  width: 80%;
+  width: 60%;
   height: auto;
-  background-color: pink;
+  background-color: white;
+  margin: 32px 0 ;
 `
 const Tab = styled.div`
   width: 100%;
@@ -28,7 +29,7 @@ const ProjectsList = () => {
         completed: false,
         estimatedEffortLevel: 6,
         actualEffortLevel: 0,
-        description: 'Sit elit nisi dolor exercitation est esse tempor dolore in labore cillum ea sit. Non magna dolor fugiat cupidatat sint ullamco nisi ut qui ex pariatur qui esse incididunt excepteur labore.Culpa sint in pariatur pariatur nisi exercitation in ut elit sunt ut. Nulla excepteur et officia id id qui ut nisi non ex reprehenderit cupidatat laboris. Qui labore in ullamco qui aliquip duis anim adipisicing magna veniam aliqua qui consectetur mollit magna nisi elit. Ut esse aute esse pariatur voluptate commodo elit adipisicing eu sit. Ad dolor irure anim culpa anim velit dolore reprehenderit excepteur aliquip aliquip esse nisi. Voluptate proident non consequat fugiat est nisi proident dolor cupidatat irure occaecat eiusmod veniam proident exercitation. Eu culpa laborum quis excepteur non adipisicing do ut irure tempor qui consequat elit est in ea non. Est aliqua anim do quis esse in veniam ex consectetur ex sit et aute deserunt in esse.'
+        description: 'Nulla excepteur et officia id id qui ut nisi non ex reprehenderit cupidatat laboris. Qui labore in ullamco qui aliquip duis anim adipisicing magna veniam aliqua qui consectetur mollit magna nisi elit. Ut esse aute esse pariatur voluptate commodo elit adipisicing eu sit. Ad dolor irure anim culpa anim velit dolore reprehenderit excepteur aliquip aliquip esse nisi. Voluptate proident non consequat fugiat est nisi proident dolor cupidatat irure occaecat eiusmod veniam proident exercitation.'
       },
       {
         id: 2,
@@ -38,7 +39,7 @@ const ProjectsList = () => {
         completed: true,
         estimatedEffortLevel: 8,
         actualEffortLevel: 10,
-        description: 'Sit elit nisi dolor exercitation est esse tempor dolore in labore cillum ea sit. Non magna dolor fugiat cupidatat sint ullamco nisi ut qui ex pariatur qui esse incididunt excepteur labore.Culpa sint in pariatur pariatur nisi exercitation in ut elit sunt ut. Nulla excepteur et officia id id qui ut nisi non ex reprehenderit cupidatat laboris. Qui labore in ullamco qui aliquip duis anim adipisicing magna veniam aliqua qui consectetur mollit magna nisi elit. Ut esse aute esse pariatur voluptate commodo elit adipisicing eu sit. Ad dolor irure anim culpa anim velit dolore reprehenderit excepteur aliquip aliquip esse nisi. Voluptate proident non consequat fugiat est nisi proident dolor cupidatat irure occaecat eiusmod veniam proident exercitation. Eu culpa laborum quis excepteur non adipisicing do ut irure tempor qui consequat elit est in ea non. Est aliqua anim do quis esse in veniam ex consectetur ex sit et aute deserunt in esse.'
+        description: 'Nulla excepteur et officia id id qui ut nisi non ex reprehenderit cupidatat laboris. Qui labore in ullamco qui aliquip duis anim adipisicing magna veniam aliqua qui consectetur mollit magna nisi elit. Ut esse aute esse pariatur voluptate commodo elit adipisicing eu sit. Ad dolor irure anim culpa anim velit dolore reprehenderit excepteur aliquip aliquip esse nisi. Voluptate proident non consequat fugiat est nisi proident dolor cupidatat irure occaecat eiusmod veniam proident exercitation.'
       },
       {
         id: 3,
@@ -48,7 +49,7 @@ const ProjectsList = () => {
         completed: true,
         estimatedEffortLevel: 8,
         actualEffortLevel: 10,
-        description: 'Sit elit nisi dolor exercitation est esse tempor dolore in labore cillum ea sit. Non magna dolor fugiat cupidatat sint ullamco nisi ut qui ex pariatur qui esse incididunt excepteur labore.Culpa sint in pariatur pariatur nisi exercitation in ut elit sunt ut. Nulla excepteur et officia id id qui ut nisi non ex reprehenderit cupidatat laboris. Qui labore in ullamco qui aliquip duis anim adipisicing magna veniam aliqua qui consectetur mollit magna nisi elit. Ut esse aute esse pariatur voluptate commodo elit adipisicing eu sit. Ad dolor irure anim culpa anim velit dolore reprehenderit excepteur aliquip aliquip esse nisi. Voluptate proident non consequat fugiat est nisi proident dolor cupidatat irure occaecat eiusmod veniam proident exercitation. Eu culpa laborum quis excepteur non adipisicing do ut irure tempor qui consequat elit est in ea non. Est aliqua anim do quis esse in veniam ex consectetur ex sit et aute deserunt in esse.'
+        description: 'Nulla excepteur et officia id id qui ut nisi non ex reprehenderit cupidatat laboris. Qui labore in ullamco qui aliquip duis anim adipisicing magna veniam aliqua qui consectetur mollit magna nisi elit. Ut esse aute esse pariatur voluptate commodo elit adipisicing eu sit. Ad dolor irure anim culpa anim velit dolore reprehenderit excepteur aliquip aliquip esse nisi. Voluptate proident non consequat fugiat est nisi proident dolor cupidatat irure occaecat eiusmod veniam proident exercitation.'
       },
       {
         id: 4,
@@ -58,7 +59,7 @@ const ProjectsList = () => {
         completed: true,
         estimatedEffortLevel: 8,
         actualEffortLevel: 10,
-        description: 'Sit elit nisi dolor exercitation est esse tempor dolore in labore cillum ea sit. Non magna dolor fugiat cupidatat sint ullamco nisi ut qui ex pariatur qui esse incididunt excepteur labore.Culpa sint in pariatur pariatur nisi exercitation in ut elit sunt ut. Nulla excepteur et officia id id qui ut nisi non ex reprehenderit cupidatat laboris. Qui labore in ullamco qui aliquip duis anim adipisicing magna veniam aliqua qui consectetur mollit magna nisi elit. Ut esse aute esse pariatur voluptate commodo elit adipisicing eu sit. Ad dolor irure anim culpa anim velit dolore reprehenderit excepteur aliquip aliquip esse nisi. Voluptate proident non consequat fugiat est nisi proident dolor cupidatat irure occaecat eiusmod veniam proident exercitation. Eu culpa laborum quis excepteur non adipisicing do ut irure tempor qui consequat elit est in ea non. Est aliqua anim do quis esse in veniam ex consectetur ex sit et aute deserunt in esse.'
+        description: 'Nulla excepteur et officia id id qui ut nisi non ex reprehenderit cupidatat laboris. Qui labore in ullamco qui aliquip duis anim adipisicing magna veniam aliqua qui consectetur mollit magna nisi elit. Ut esse aute esse pariatur voluptate commodo elit adipisicing eu sit. Ad dolor irure anim culpa anim velit dolore reprehenderit excepteur aliquip aliquip esse nisi. Voluptate proident non consequat fugiat est nisi proident dolor cupidatat irure occaecat eiusmod veniam proident exercitation.'
       },
       {
         id: 5,
@@ -68,7 +69,7 @@ const ProjectsList = () => {
         completed: true,
         estimatedEffortLevel: 8,
         actualEffortLevel: 10,
-        description: 'Sit elit nisi dolor exercitation est esse tempor dolore in labore cillum ea sit. Non magna dolor fugiat cupidatat sint ullamco nisi ut qui ex pariatur qui esse incididunt excepteur labore.Culpa sint in pariatur pariatur nisi exercitation in ut elit sunt ut. Nulla excepteur et officia id id qui ut nisi non ex reprehenderit cupidatat laboris. Qui labore in ullamco qui aliquip duis anim adipisicing magna veniam aliqua qui consectetur mollit magna nisi elit. Ut esse aute esse pariatur voluptate commodo elit adipisicing eu sit. Ad dolor irure anim culpa anim velit dolore reprehenderit excepteur aliquip aliquip esse nisi. Voluptate proident non consequat fugiat est nisi proident dolor cupidatat irure occaecat eiusmod veniam proident exercitation. Eu culpa laborum quis excepteur non adipisicing do ut irure tempor qui consequat elit est in ea non. Est aliqua anim do quis esse in veniam ex consectetur ex sit et aute deserunt in esse.'
+        description: 'Nulla excepteur et officia id id qui ut nisi non ex reprehenderit cupidatat laboris. Qui labore in ullamco qui aliquip duis anim adipisicing magna veniam aliqua qui consectetur mollit magna nisi elit. Ut esse aute esse pariatur voluptate commodo elit adipisicing eu sit. Ad dolor irure anim culpa anim velit dolore reprehenderit excepteur aliquip aliquip esse nisi. Voluptate proident non consequat fugiat est nisi proident dolor cupidatat irure occaecat eiusmod veniam proident exercitation.'
       },
       {
         id: 6,
@@ -78,7 +79,7 @@ const ProjectsList = () => {
         completed: false,
         estimatedEffortLevel: 6,
         actualEffortLevel: 0,
-        description: 'Sit elit nisi dolor exercitation est esse tempor dolore in labore cillum ea sit. Non magna dolor fugiat cupidatat sint ullamco nisi ut qui ex pariatur qui esse incididunt excepteur labore.Culpa sint in pariatur pariatur nisi exercitation in ut elit sunt ut. Nulla excepteur et officia id id qui ut nisi non ex reprehenderit cupidatat laboris. Qui labore in ullamco qui aliquip duis anim adipisicing magna veniam aliqua qui consectetur mollit magna nisi elit. Ut esse aute esse pariatur voluptate commodo elit adipisicing eu sit. Ad dolor irure anim culpa anim velit dolore reprehenderit excepteur aliquip aliquip esse nisi. Voluptate proident non consequat fugiat est nisi proident dolor cupidatat irure occaecat eiusmod veniam proident exercitation. Eu culpa laborum quis excepteur non adipisicing do ut irure tempor qui consequat elit est in ea non. Est aliqua anim do quis esse in veniam ex consectetur ex sit et aute deserunt in esse.'
+        description: 'Nulla excepteur et officia id id qui ut nisi non ex reprehenderit cupidatat laboris. Qui labore in ullamco qui aliquip duis anim adipisicing magna veniam aliqua qui consectetur mollit magna nisi elit. Ut esse aute esse pariatur voluptate commodo elit adipisicing eu sit. Ad dolor irure anim culpa anim velit dolore reprehenderit excepteur aliquip aliquip esse nisi. Voluptate proident non consequat fugiat est nisi proident dolor cupidatat irure occaecat eiusmod veniam proident exercitation.'
       },
       {
         id: 7,
@@ -88,7 +89,7 @@ const ProjectsList = () => {
         completed: false,
         estimatedEffortLevel: 6,
         actualEffortLevel: 0,
-        description: 'Sit elit nisi dolor exercitation est esse tempor dolore in labore cillum ea sit. Non magna dolor fugiat cupidatat sint ullamco nisi ut qui ex pariatur qui esse incididunt excepteur labore.Culpa sint in pariatur pariatur nisi exercitation in ut elit sunt ut. Nulla excepteur et officia id id qui ut nisi non ex reprehenderit cupidatat laboris. Qui labore in ullamco qui aliquip duis anim adipisicing magna veniam aliqua qui consectetur mollit magna nisi elit. Ut esse aute esse pariatur voluptate commodo elit adipisicing eu sit. Ad dolor irure anim culpa anim velit dolore reprehenderit excepteur aliquip aliquip esse nisi. Voluptate proident non consequat fugiat est nisi proident dolor cupidatat irure occaecat eiusmod veniam proident exercitation. Eu culpa laborum quis excepteur non adipisicing do ut irure tempor qui consequat elit est in ea non. Est aliqua anim do quis esse in veniam ex consectetur ex sit et aute deserunt in esse.'
+        description: 'Nulla excepteur et officia id id qui ut nisi non ex reprehenderit cupidatat laboris. Qui labore in ullamco qui aliquip duis anim adipisicing magna veniam aliqua qui consectetur mollit magna nisi elit. Ut esse aute esse pariatur voluptate commodo elit adipisicing eu sit. Ad dolor irure anim culpa anim velit dolore reprehenderit excepteur aliquip aliquip esse nisi. Voluptate proident non consequat fugiat est nisi proident dolor cupidatat irure occaecat eiusmod veniam proident exercitation.'
       },
       {
         id: 8,
@@ -98,7 +99,7 @@ const ProjectsList = () => {
         completed: false,
         estimatedEffortLevel: 6,
         actualEffortLevel: 0,
-        description: 'Sit elit nisi dolor exercitation est esse tempor dolore in labore cillum ea sit. Non magna dolor fugiat cupidatat sint ullamco nisi ut qui ex pariatur qui esse incididunt excepteur labore.Culpa sint in pariatur pariatur nisi exercitation in ut elit sunt ut. Nulla excepteur et officia id id qui ut nisi non ex reprehenderit cupidatat laboris. Qui labore in ullamco qui aliquip duis anim adipisicing magna veniam aliqua qui consectetur mollit magna nisi elit. Ut esse aute esse pariatur voluptate commodo elit adipisicing eu sit. Ad dolor irure anim culpa anim velit dolore reprehenderit excepteur aliquip aliquip esse nisi. Voluptate proident non consequat fugiat est nisi proident dolor cupidatat irure occaecat eiusmod veniam proident exercitation. Eu culpa laborum quis excepteur non adipisicing do ut irure tempor qui consequat elit est in ea non. Est aliqua anim do quis esse in veniam ex consectetur ex sit et aute deserunt in esse.'
+        description: 'Nulla excepteur et officia id id qui ut nisi non ex reprehenderit cupidatat laboris. Qui labore in ullamco qui aliquip duis anim adipisicing magna veniam aliqua qui consectetur mollit magna nisi elit. Ut esse aute esse pariatur voluptate commodo elit adipisicing eu sit. Ad dolor irure anim culpa anim velit dolore reprehenderit excepteur aliquip aliquip esse nisi. Voluptate proident non consequat fugiat est nisi proident dolor cupidatat irure occaecat eiusmod veniam proident exercitation.'
       },
       {
         id: 9,
@@ -108,7 +109,7 @@ const ProjectsList = () => {
         completed: false,
         estimatedEffortLevel: 6,
         actualEffortLevel: 0,
-        description: 'Sit elit nisi dolor exercitation est esse tempor dolore in labore cillum ea sit. Non magna dolor fugiat cupidatat sint ullamco nisi ut qui ex pariatur qui esse incididunt excepteur labore.Culpa sint in pariatur pariatur nisi exercitation in ut elit sunt ut. Nulla excepteur et officia id id qui ut nisi non ex reprehenderit cupidatat laboris. Qui labore in ullamco qui aliquip duis anim adipisicing magna veniam aliqua qui consectetur mollit magna nisi elit. Ut esse aute esse pariatur voluptate commodo elit adipisicing eu sit. Ad dolor irure anim culpa anim velit dolore reprehenderit excepteur aliquip aliquip esse nisi. Voluptate proident non consequat fugiat est nisi proident dolor cupidatat irure occaecat eiusmod veniam proident exercitation. Eu culpa laborum quis excepteur non adipisicing do ut irure tempor qui consequat elit est in ea non. Est aliqua anim do quis esse in veniam ex consectetur ex sit et aute deserunt in esse.'
+        description: 'Nulla excepteur et officia id id qui ut nisi non ex reprehenderit cupidatat laboris. Qui labore in ullamco qui aliquip duis anim adipisicing magna veniam aliqua qui consectetur mollit magna nisi elit. Ut esse aute esse pariatur voluptate commodo elit adipisicing eu sit. Ad dolor irure anim culpa anim velit dolore reprehenderit excepteur aliquip aliquip esse nisi. Voluptate proident non consequat fugiat est nisi proident dolor cupidatat irure occaecat eiusmod veniam proident exercitation.'
       },
       {
         id: 10,
@@ -118,7 +119,7 @@ const ProjectsList = () => {
         completed: false,
         estimatedEffortLevel: 6,
         actualEffortLevel: 0,
-        description: 'Sit elit nisi dolor exercitation est esse tempor dolore in labore cillum ea sit. Non magna dolor fugiat cupidatat sint ullamco nisi ut qui ex pariatur qui esse incididunt excepteur labore.Culpa sint in pariatur pariatur nisi exercitation in ut elit sunt ut. Nulla excepteur et officia id id qui ut nisi non ex reprehenderit cupidatat laboris. Qui labore in ullamco qui aliquip duis anim adipisicing magna veniam aliqua qui consectetur mollit magna nisi elit. Ut esse aute esse pariatur voluptate commodo elit adipisicing eu sit. Ad dolor irure anim culpa anim velit dolore reprehenderit excepteur aliquip aliquip esse nisi. Voluptate proident non consequat fugiat est nisi proident dolor cupidatat irure occaecat eiusmod veniam proident exercitation. Eu culpa laborum quis excepteur non adipisicing do ut irure tempor qui consequat elit est in ea non. Est aliqua anim do quis esse in veniam ex consectetur ex sit et aute deserunt in esse.'
+        description: 'Nulla excepteur et officia id id qui ut nisi non ex reprehenderit cupidatat laboris. Qui labore in ullamco qui aliquip duis anim adipisicing magna veniam aliqua qui consectetur mollit magna nisi elit. Ut esse aute esse pariatur voluptate commodo elit adipisicing eu sit. Ad dolor irure anim culpa anim velit dolore reprehenderit excepteur aliquip aliquip esse nisi. Voluptate proident non consequat fugiat est nisi proident dolor cupidatat irure occaecat eiusmod veniam proident exercitation.'
       }
     ]
   )
@@ -166,7 +167,6 @@ const ProjectsList = () => {
 
   return (
   	<GridList>
-    <div>
       <Tabs>
         <Tab label="STARTED">
           {startedList}
@@ -175,7 +175,6 @@ const ProjectsList = () => {
           {completedList}
         </Tab>
       </Tabs>
-    </div>
     </GridList>
   )
 }

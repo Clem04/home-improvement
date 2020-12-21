@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     width: 100%;
     height: 100vh;
-    background-color: yellow;
+    background-color: white;
     text-align: center;
   }
 `
@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
 const ContentContainer = styled.div`
   width: 100%;
   height: auto;
-  background-color: orange;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;

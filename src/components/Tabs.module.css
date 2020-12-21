@@ -16,10 +16,13 @@
 
 .current {
   font-weight: bold;
-  color: red;
   border-bottom: 6px solid red;
   position: relative;
   top: 6px;
+}
+
+.current > a {
+  color: red;
 }
 
 a:-webkit-any-link {
