@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "gatsby"
 
 const Nav = styled.div`
   height: 8vh;
@@ -36,16 +37,22 @@ const SignOutBtn = styled(AddBtn)`
   padding: 8px 16px;
 `
 
-export default function Navbar() {
+const Navbar = () => {
   return (
   	<Nav>
   		<LeftDiv>
-  			<h4>HOME IPROVEMENT</h4>
-  			<AddBtn>NEW PROJECT</AddBtn>
+        <Link to="/">
+           <h4 style={{color: "white"}}>HOME IPROVEMENT</h4>
+        </Link>
+        <Link to="/new-project">
+  			   <AddBtn>NEW PROJECT</AddBtn>
+        </Link>
   		</LeftDiv>
   		<RightDiv>
-  			<SignOutBtn>NEW PROJECT</SignOutBtn>
+  			<SignOutBtn>SIGN OUT</SignOutBtn>
   		</RightDiv>
   	</Nav>
   )
 }
+
+export default Navbar

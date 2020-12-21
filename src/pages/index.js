@@ -2,12 +2,13 @@ import React from "react"
 
 // Components
 import Layout from "../components/Layout"
-import Navbar from "../components/Navbar"
+import ProjectsList from "../components/Projects-List"
+
 
 export default function Home() {
   return (
   	<Layout>
-  		<Navbar />
+  			<ProjectsList />
   	</Layout>
   )
 }
