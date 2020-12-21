@@ -1,11 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import { Icon, InlineIcon } from '@iconify/react';
-
-import accountIcon from '@iconify-icons/mdi/account';
-import clockTimeNineOutline from '@iconify-icons/mdi/clock-time-nine-outline';
-
-
+import { FiClock } from "react-icons/fi";
+import { FiUser } from "react-icons/fi";
 
 import styles from './Card.module.css'
 
@@ -86,12 +82,14 @@ const ProjectCard = ({title, client, date, description, completed, estimate, act
   const statusBtn = () => {
     if(completed === true){
 
-      return <CompletedBtn className={styles.completed} onClick={() => alert('STARTED')}>
+      return <CompletedBtn className={styles.completed} 
+              onClick={() => alert('Are you sure you want to make this change?')}>
                 COMPLETED
              </CompletedBtn>
     } else{
 
-      return <StartedBtn onClick={() => alert('COMPLETED')}>
+      return <StartedBtn onClick={() => 
+              alert('Are you sure you have completed this project?')}>
                 STARTED
              </StartedBtn>
     }
@@ -109,10 +107,10 @@ const ProjectCard = ({title, client, date, description, completed, estimate, act
         </ProjectTitle>
         <ProjectClient>
           <div>
-            <p><Icon icon={accountIcon} style={{marginBottom: "-3px"}}/><span>{client}</span></p>
+            <p><FiUser style={{marginRight: "6px", marginBottom: "-3px"}} /><span>{client}</span></p>
           </div>
           <div style={{marginLeft: "16px"}}>
-            <p><Icon icon={clockTimeNineOutline} style={{marginBottom: "-3px"}}/><span>{date}</span></p>
+            <p><FiClock style={{marginRight: "6px", marginBottom: "-3px"}} /><span>{date}</span></p>
           </div>
         </ProjectClient>
         <ProjectDescription>

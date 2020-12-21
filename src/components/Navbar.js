@@ -1,5 +1,8 @@
 import React from "react"
 import styled from "styled-components"
+
+// import styles from './Navbar.module.css'
+
 import { Link } from "gatsby"
 
 const Nav = styled.div`
@@ -31,6 +34,9 @@ const AddBtn = styled.button`
   padding: 8px 32px;
   border-radius: 4px;
   border: none;
+  @media (max-width: 414px) {
+    display: none;
+  }
 `
 const SignOutBtn = styled(AddBtn)`
   background-color: rgba(0,0,200,1);
