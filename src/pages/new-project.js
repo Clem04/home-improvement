@@ -114,24 +114,28 @@ export default function NewProject() {
 	  				<FormSection>
 				        <label>
 					        <Label>Project Title:</Label>
+					        <>{ /* eslint-disable-next-line jsx-a11y/label-has-associated-control */ }</>
 					        <Input type="text" name="projectTitle" onChange={handleChange} />
 				        </label>
 	  				</FormSection>
 	  				<FormSection>
 				        <label>
 					        <Label>Client Name:</Label>
+					        <>{ /* eslint-disable-next-line jsx-a11y/label-has-associated-control */ }</>
 					        <Input type="text" name="clientName" onChange={handleChange} />
 				        </label>
 	  				</FormSection>
 	  				<FormSection>
 				        <label>
 					        <Label>Estimated level of effort:</Label>
+					        <>{ /* eslint-disable-next-line jsx-a11y/label-has-associated-control */ }</>
 					        <Input type="text" name="estimatedEffort" onChange={handleChange} />
 				        </label>
 	  				</FormSection>
 	  				<FormSection>
 				        <label>
 					        <Label>Description:</Label>
+					        <>{ /* eslint-disable-next-line jsx-a11y/label-has-associated-control */ }</>
 					        <DescriptionBox rows="10" type="text" name="description" onChange={handleChange}>
 					        </DescriptionBox>
 				        </label>
