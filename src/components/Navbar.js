@@ -55,12 +55,6 @@ const AddBtn = styled.button`
     color: red;
   }
 
-  &:active {
-    color: red; 
-    background-color: white;
-    border: 1px solid red;
-  }
-
   @media (max-width: 414px) {
     display: none;
   }
@@ -68,6 +62,10 @@ const AddBtn = styled.button`
 const SignOutBtn = styled(AddBtn)`
   background-color: rgba(0,0,200,1);
   padding: 8px 16px;
+  &:hover {
+    background-color: white;
+    color: blue;
+  }
 `
 
 const Navbar = () => {
