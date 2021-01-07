@@ -1,10 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import { FiAlignCenter } from "react-icons/fi";
-
-import styles from './Navbar.module.css'
-
+import BurgerMenu from "./Burger-Menu"
 import { Link } from "gatsby"
 
 const Nav = styled.div`
@@ -35,10 +32,20 @@ const RightDiv = styled(LeftDiv)`
   width: 85%;
   justify-content: space-between;
   @media (max-width: 414px) {
-    display: none;
+    width: 30%;
+    justify-content: flex-end;
   }
   @media only screen and (max-width: 1024px) and (min-width: 768px) {
     width: 75%;
+  }
+`
+const RightSec = styled(RightDiv)`
+  width: 100%;
+  @media (max-width: 414px) {
+    display: none;
+  }
+  @media only screen and (max-width: 1024px) and (min-width: 768px) {
+    width: 100%;
   }
 `
 
@@ -77,11 +84,13 @@ const Navbar = () => {
           </Link>
     		</LeftDiv>
     		<RightDiv>
-          <Link to="/new-project">
-    			   <AddBtn>NEW PROJECT</AddBtn>
-          </Link>
-          <FiAlignCenter size="2x" className={styles.burgerIcon} />
-    			<SignOutBtn>SIGN OUT</SignOutBtn>
+          <RightSec>
+            <Link to="/new-project">
+      			   <AddBtn>NEW PROJECT</AddBtn>
+            </Link>
+      			<SignOutBtn>SIGN OUT</SignOutBtn>
+          </RightSec>
+          <BurgerMenu />
     		</RightDiv>
   	</Nav>
   )
