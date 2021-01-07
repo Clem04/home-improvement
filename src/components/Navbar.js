@@ -19,16 +19,26 @@ const Nav = styled.div`
 `
 
 const LeftDiv = styled.div`
-  width: 50%;
+  width: 15%;
   height: 32px;
   display: flex;
   align-items: center;
+  @media (max-width: 414px) {
+    width: 70%;
+  }
+  @media only screen and (max-width: 1024px) and (min-width: 768px) {
+    width: 25%;
+  }
 `
 
 const RightDiv = styled(LeftDiv)`
-  justify-content: flex-end;
+  width: 85%;
+  justify-content: space-between;
   @media (max-width: 414px) {
-    width: 10%;
+    display: none;
+  }
+  @media only screen and (max-width: 1024px) and (min-width: 768px) {
+    width: 75%;
   }
 `
 
@@ -36,7 +46,6 @@ const AddBtn = styled.button`
   font-size: 12px;
   background-color: red;
   color: white;
-  margin: 0 0 0 32px;
   padding: 8px 32px;
   border-radius: 4px;
   border: none;
@@ -44,6 +53,12 @@ const AddBtn = styled.button`
   &:hover {
     background-color: white;
     color: red;
+  }
+
+  &:active {
+    color: red; 
+    background-color: white;
+    border: 1px solid red;
   }
 
   @media (max-width: 414px) {
@@ -62,11 +77,11 @@ const Navbar = () => {
           <Link to="/">
              <h4 style={{color: "white"}}>HOME IPROVEMENT</h4>
           </Link>
+    		</LeftDiv>
+    		<RightDiv>
           <Link to="/new-project">
     			   <AddBtn>NEW PROJECT</AddBtn>
           </Link>
-    		</LeftDiv>
-    		<RightDiv>
           <FiAlignCenter size="2x" className={styles.burgerIcon} />
     			<SignOutBtn>SIGN OUT</SignOutBtn>
     		</RightDiv>
