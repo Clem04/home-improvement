@@ -7,22 +7,23 @@ const Button = styled.button`
   background-color: white;
   padding: 8px 0;
   border-radius: 2px;
-  border: 1px solid green;
-  color: green;
+  border: 1px solid ${({ color }) => color ? 'green' : 'red'};
+  color: ${({ color }) => color ? 'green' : 'red'};
 
   &:hover {
     color: white;
-    background-color: green;
+    background-color: ${({ color }) => color ? 'green' : 'red'};
   }
 `
 
-const CompletedBtn =() => {
+const StatusBtn =({text, color}) => {
 	return (
 		<Button
+      color={color}
       onClick={() => alert('Are you sure you want to make this change?')}>
-      Completed
+      {text}
     </Button>
 	);
 }
 
-export default CompletedBtn
+export default StatusBtn
