@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from "gatsby"
 import styled from "styled-components"
 
 import AuthBtn from "../Buttons/Auth-Btn"

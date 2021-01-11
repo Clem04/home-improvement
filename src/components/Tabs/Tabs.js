@@ -46,15 +46,19 @@ const Tabs = ({ children }) => {
     );
   })
 
+  const tabLabel = children.map((tab) => (
+    <li className={tab.props.label === activeTab ? styles.current : ""} 
+    key={tab.props.label}>
+
+      <a href="#" onClick={(e) => handleClick(e, tab.props.label)}>{tab.props.label}</a>
+      
+    </li>
+  ))
+
   return(
   	<ListsContainer>
 	    <ul className={styles.tabs}>
-        {children.map((tab) => (
-          <li className={tab.props.label === activeTab ? styles.current : ""} 
-          key={tab.props.label}>
-            <a href="#" onClick={(e) => handleClick(e, tab.props.label)}>{tab.props.label}</a>
-          </li>
-        ))}
+        {tabLabel}
 	    </ul>
 
       {contentTab}
