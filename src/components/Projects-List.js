@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 
 // Import components
@@ -22,7 +22,7 @@ const Tab = styled.div`
 
 const ProjectsList = () => {
 
-  const projects = 
+  const [projects, setProjects] = useState(
     [
       {
         id: 1,
@@ -125,6 +125,7 @@ const ProjectsList = () => {
         description: 'Nulla excepteur et officia id id qui ut nisi non ex reprehenderit cupidatat laboris. Qui labore in ullamco qui aliquip duis anim adipisicing magna veniam aliqua qui consectetur mollit magna nisi elit. Ut esse aute esse pariatur voluptate commodo elit adipisicing eu sit. Ad dolor irure anim culpa anim velit dolore reprehenderit excepteur aliquip aliquip esse nisi. Voluptate proident non consequat fugiat est nisi proident dolor cupidatat irure occaecat eiusmod veniam proident exercitation.'
       }
     ]
+  ) 
 
   console.log(projects)
 

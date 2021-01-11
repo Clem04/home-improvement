@@ -69,7 +69,6 @@ const ProjectDescription = styled(ProjectTitle)`
 
 const ProjectCard = ({title, client, date, description, completed, estimate, actual}) => {
 
-
   let status;
   if (!!completed) {
     status = <StatusBtn text={"COMPLETED"} color={completed}/>
