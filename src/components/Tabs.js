@@ -10,6 +10,9 @@ const ListsContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  @media (max-width: 414px) {
+    margin-top: 48px;
+  }
 `;
 
 const ContentDiv = styled.div`

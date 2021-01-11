@@ -1,10 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import { FiAlignCenter } from "react-icons/fi";
-
-import styles from './Navbar.module.css'
-
+import BurgerMenu from "./Burger-Menu"
 import { Link } from "gatsby"
 
 const Nav = styled.div`
@@ -16,19 +13,39 @@ const Nav = styled.div`
   background-color: blue;
   color: white;
   position: relative;
+  @media (max-width: 414px) {
+    width: 100%;
+    position: fixed;
+  }
 `
 
-const LeftDiv = styled.div`
-  width: 50%;
+const Logo = styled.div`
+  width: 15%;
   height: 32px;
   display: flex;
   align-items: center;
+  @media (max-width: 414px) {
+    width: fit-content;
+  }
+  @media only screen and (max-width: 1024px) and (min-width: 768px) {
+    width: 25%;
+  }
 `
 
-const RightDiv = styled(LeftDiv)`
-  justify-content: flex-end;
+const RightDiv = styled(Logo)`
+  width: 85%;
+  justify-content: space-between;
   @media (max-width: 414px) {
-    width: 10%;
+    display: none;
+  }
+  @media only screen and (max-width: 1024px) and (min-width: 768px) {
+    width: 75%;
+  }
+`
+const RightSec = styled(RightDiv)`
+  width: 100%;
+  @media only screen and (max-width: 1024px) and (min-width: 768px) {
+    width: 100%;
   }
 `
 
@@ -36,7 +53,6 @@ const AddBtn = styled.button`
   font-size: 12px;
   background-color: red;
   color: white;
-  margin: 0 0 0 32px;
   padding: 8px 32px;
   border-radius: 4px;
   border: none;
@@ -53,23 +69,29 @@ const AddBtn = styled.button`
 const SignOutBtn = styled(AddBtn)`
   background-color: rgba(0,0,200,1);
   padding: 8px 16px;
+  &:hover {
+    background-color: white;
+    color: blue;
+  }
 `
 
 const Navbar = () => {
   return (
   	<Nav>
-    		<LeftDiv>
+    		<Logo>
           <Link to="/">
              <h4 style={{color: "white"}}>HOME IPROVEMENT</h4>
           </Link>
-          <Link to="/new-project">
-    			   <AddBtn>NEW PROJECT</AddBtn>
-          </Link>
-    		</LeftDiv>
+    		</Logo>
     		<RightDiv>
-          <FiAlignCenter size="2x" className={styles.burgerIcon} />
-    			<SignOutBtn>SIGN OUT</SignOutBtn>
+          <RightSec>
+            <Link to="/new-project">
+      			   <AddBtn>NEW PROJECT</AddBtn>
+            </Link>
+      			<SignOutBtn>SIGN OUT</SignOutBtn>
+          </RightSec>
     		</RightDiv>
+        <BurgerMenu />
   	</Nav>
   )
 }
