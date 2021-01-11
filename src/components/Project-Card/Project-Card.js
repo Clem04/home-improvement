@@ -70,16 +70,8 @@ const ProjectDescription = styled(ProjectTitle)`
 
 const ProjectCard = ({title, client, date, description, completed, estimate, actual}) => {
 
-  const statusBtn = () => {
-    if(completed === true){
-
-      return <CompletedBtn />
-    } else{
-
-      return <StartedBtn />
-    }
-  }
-
+  const statusBtn = completed ? <CompletedBtn /> : <StartedBtn />;
+  
   return (
     <Card>
       <Container>
@@ -103,7 +95,7 @@ const ProjectCard = ({title, client, date, description, completed, estimate, act
             <p style={{textAlign: "left"}}>{description}</p>
           </ProjectText>
           <ProjectLevelOfEffort>
-            <div style={{width: "100%"}}>{statusBtn()}</div>
+            <div style={{width: "100%"}}>{statusBtn}</div>
             <div style={{width: "100%", backgroundColor: "#e0e0e0", 
                         marginTop: "16px", display: "flex"}}>
               <EstimateBox>
