@@ -11,7 +11,8 @@ const Ul = styled.ul`
   	background-color: blue;
   	list-style: none;
   	display: flex;
-  	flex-wrap: nowrap;
+  	flex-flow: column nowrap;
+  	padding-top: 80px;
     transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
     transition: transform 0.3s ease-in-out;
     position: fixed;
@@ -30,10 +31,10 @@ const RightNav = ({ open }) => {
 			<Ul open={open}>
 				<li>
 					<Link to="/new-project">
-			            <h4 style={{color: "white"}}>New Project</h4>
+			            <h2 style={{color: "white"}}>New Project</h2>
 			        </Link>
 				</li>
-				<li>Sign Out</li>
+				<li><h2>Sign Out</h2></li>
 			</Ul>
 		</>
 	);
