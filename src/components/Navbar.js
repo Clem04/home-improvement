@@ -1,9 +1,10 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "gatsby"
 
 import BurgerMenu from "./Burger-Menu"
 import AuthBtn from "./buttons/Auth-Btn"
-import { Link } from "gatsby"
+import AddBtn from "./buttons/Add-Btn"
 
 const Nav = styled.div`
   height: 8vh;
@@ -50,24 +51,6 @@ const RightSec = styled(RightDiv)`
   }
 `
 
-const AddBtn = styled.button`
-  font-size: 12px;
-  background-color: red;
-  color: white;
-  padding: 8px 32px;
-  border-radius: 4px;
-  border: none;
-
-  &:hover {
-    background-color: white;
-    color: red;
-  }
-
-  @media (max-width: 414px) {
-    display: none;
-  }
-`
-
 const Navbar = () => {
   return (
   	<Nav>
@@ -78,9 +61,7 @@ const Navbar = () => {
     		</Logo>
     		<RightDiv>
           <RightSec>
-            <Link to="/new-project">
-      			   <AddBtn>NEW PROJECT</AddBtn>
-            </Link>
+            <AddBtn />
       			<AuthBtn />
           </RightSec>
     		</RightDiv>
