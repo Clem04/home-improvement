@@ -8,7 +8,7 @@
 }
 
 .tabs > li {
-  width: 50%;
+  width:calc(100% / 2);
   font-size: 20px;
   text-align: center;
   padding: 0 0 10px 0;

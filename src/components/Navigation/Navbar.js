@@ -3,8 +3,8 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 
 import BurgerMenu from "./Burger-Menu"
-import AuthBtn from "../Buttons/Auth-Btn"
-import AddBtn from "../Buttons/Add-Btn"
+import AuthBtn from "../buttons/Auth-Btn"
+import AddBtn from "../buttons/Add-Btn"
 
 const Nav = styled.div`
   height: 8vh;

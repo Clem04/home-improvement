@@ -4,9 +4,9 @@ import { FiClock } from "react-icons/fi";
 import { FiUser } from "react-icons/fi";
 
 import styles from './Card.module.css'
-import CompletedBtn from '../Buttons/Completed-Btn'
-import StartedBtn from '../Buttons/Started-Btn'
-import EditDeleteBtn from '../Buttons/Edit-Delete-Btn'
+import CompletedBtn from '../buttons/Completed-Btn'
+import StartedBtn from '../buttons/Started-Btn'
+import EditDeleteBtn from '../buttons/Edit-Delete-Btn'
 
 const Card = styled.div`
   width: 100%;

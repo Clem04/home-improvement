@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from "styled-components"
 
-import AuthBtn from "../Buttons/Auth-Btn"
-import AddBtn from "../Buttons/Add-Btn"
+import AuthBtn from "../buttons/Auth-Btn"
+import AddBtn from "../buttons/Add-Btn"
 
 const Ul = styled.ul`
   display: none;
