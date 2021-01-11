@@ -56,7 +56,7 @@ const Navbar = () => {
   	<Nav>
     		<Logo>
           <Link to="/">
-             <h4 style={{color: "white"}}>HOME IPROVEMENT</h4>
+             <h4 style={{color: "white"}}>HOME IMPROVEMENT</h4>
           </Link>
     		</Logo>
     		<RightDiv>
