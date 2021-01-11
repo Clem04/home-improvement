@@ -1,6 +1,6 @@
 import React from "react"
-import styled from "styled-components"
 import { Link } from "gatsby"
+import styled from "styled-components"
 
 import BurgerMenu from "./Burger-Menu"
 import AuthBtn from "./buttons/Auth-Btn"

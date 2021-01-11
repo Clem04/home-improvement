@@ -4,6 +4,8 @@ import { FiClock } from "react-icons/fi";
 import { FiUser } from "react-icons/fi";
 
 import styles from './Card.module.css'
+import CompletedBtn from './buttons/Completed-Btn'
+import StartedBtn from './buttons/Started-Btn'
 
 const Card = styled.div`
   width: 100%;
@@ -63,29 +65,6 @@ const ProjectDescription = styled(ProjectTitle)`
   width: 50%;
   border: 1px solid black;
  `
-
-const CompletedBtn = styled.button`
-  width: 100%;
-  margin-top: 16px;
-  background-color: white;
-  color: green;
-  border: 1px solid green;
-  padding: 8px 0;
-  border-radius: 2px;
-
-  &:hover {
-    background-color: green;
-    color: white;
-  }
-`
-const StartedBtn = styled(CompletedBtn)`
-  border: 1px solid red;
-  color: red;
-
-  &:hover {
-    background-color: red;
-  }
-`
 const Button = styled.button`
   width: 36%;
   padding: 4px 0;
@@ -101,16 +80,10 @@ const ProjectCard = ({title, client, date, description, completed, estimate, act
   const statusBtn = () => {
     if(completed === true){
 
-      return <CompletedBtn className={styles.completed} 
-              onClick={() => alert('Are you sure you want to make this change?')}>
-                COMPLETED
-             </CompletedBtn>
+      return <CompletedBtn />
     } else{
 
-      return <StartedBtn onClick={() => 
-              alert('Are you sure you have completed this project?')}>
-                STARTED
-             </StartedBtn>
+      return <StartedBtn />
     }
   }
 
