@@ -4,8 +4,9 @@ import { FiClock } from "react-icons/fi";
 import { FiUser } from "react-icons/fi";
 
 import styles from './Card.module.css'
-import CompletedBtn from './buttons/Completed-Btn'
-import StartedBtn from './buttons/Started-Btn'
+import CompletedBtn from '../Buttons/Completed-Btn'
+import StartedBtn from '../Buttons/Started-Btn'
+import EditDeleteBtn from '../Buttons/Edit-Delete-Btn'
 
 const Card = styled.div`
   width: 100%;
@@ -65,14 +66,6 @@ const ProjectDescription = styled(ProjectTitle)`
   width: 50%;
   border: 1px solid black;
  `
-const Button = styled.button`
-  width: 36%;
-  padding: 4px 0;
-  background-color: white;
-  color: blue;
-  border: 1px solid blue;
-  border-radius: 2px;
-`
 
 
 const ProjectCard = ({title, client, date, description, completed, estimate, actual}) => {
@@ -92,9 +85,9 @@ const ProjectCard = ({title, client, date, description, completed, estimate, act
       <Container>
         <ProjectTitle>
         	<h2>{title}</h2>
-          <div style={{width: "50%", display: "flex", justifyContent: "flex-end"}}>
-            <Button>delete</Button>
-            <Button style={{marginLeft: "16px"}}>edit</Button>
+          <div style={{width: "38%", display: "flex", justifyContent: "space-between"}}>
+            <EditDeleteBtn text={"delete"} />
+            <EditDeleteBtn text={"edit"} />
           </div>
         </ProjectTitle>
         <ProjectClient>

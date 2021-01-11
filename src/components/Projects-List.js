@@ -2,8 +2,8 @@ import React from "react"
 import styled from "styled-components"
 
 // Import components
-import ProjectCard from "./Project-Card"
-import Tabs from './Tabs'
+import ProjectCard from "./Project-Card/Project-Card"
+import Tabs from './Tabs/Tabs'
 
 const GridList = styled.div`
   width: 60%;

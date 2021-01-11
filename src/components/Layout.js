@@ -2,7 +2,7 @@ import React from "react"
 import { createGlobalStyle } from "styled-components"
 import styled from "styled-components"
 
-import Navbar from "../components/Navbar"
+import Navbar from "./Navigation/Navbar"
 
 const GlobalStyle = createGlobalStyle`
   body {
