@@ -13,27 +13,30 @@ const Nav = styled.div`
   background-color: blue;
   color: white;
   position: relative;
+  @media (max-width: 414px) {
+    width: 100%;
+    position: fixed;
+  }
 `
 
-const LeftDiv = styled.div`
+const Logo = styled.div`
   width: 15%;
   height: 32px;
   display: flex;
   align-items: center;
   @media (max-width: 414px) {
-    width: 70%;
+    width: fit-content;
   }
   @media only screen and (max-width: 1024px) and (min-width: 768px) {
     width: 25%;
   }
 `
 
-const RightDiv = styled(LeftDiv)`
+const RightDiv = styled(Logo)`
   width: 85%;
   justify-content: space-between;
   @media (max-width: 414px) {
-    width: 30%;
-    justify-content: flex-end;
+    display: none;
   }
   @media only screen and (max-width: 1024px) and (min-width: 768px) {
     width: 75%;
@@ -41,9 +44,6 @@ const RightDiv = styled(LeftDiv)`
 `
 const RightSec = styled(RightDiv)`
   width: 100%;
-  @media (max-width: 414px) {
-    display: none;
-  }
   @media only screen and (max-width: 1024px) and (min-width: 768px) {
     width: 100%;
   }
@@ -78,11 +78,11 @@ const SignOutBtn = styled(AddBtn)`
 const Navbar = () => {
   return (
   	<Nav>
-    		<LeftDiv>
+    		<Logo>
           <Link to="/">
              <h4 style={{color: "white"}}>HOME IPROVEMENT</h4>
           </Link>
-    		</LeftDiv>
+    		</Logo>
     		<RightDiv>
           <RightSec>
             <Link to="/new-project">
@@ -90,8 +90,8 @@ const Navbar = () => {
             </Link>
       			<SignOutBtn>SIGN OUT</SignOutBtn>
           </RightSec>
-          <BurgerMenu />
     		</RightDiv>
+        <BurgerMenu />
   	</Nav>
   )
 }

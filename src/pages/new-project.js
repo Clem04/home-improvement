@@ -18,6 +18,10 @@ const Form = styled.form`
   align-items: center;
   padding: 16px 32px;
   box-shadow: 1px 3px 19px rgba(0, 0, 0, 0.19);
+  @media (max-width: 414px) {
+  	width: 90%;
+  	margin-top: 116px;
+  }
 `
 const FormSection = styled.div`
 	width: 80%;
