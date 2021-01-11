@@ -1,8 +1,10 @@
 import React from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
 
 import BurgerMenu from "./Burger-Menu"
-import { Link } from "gatsby"
+import AuthBtn from "./buttons/Auth-Btn"
+import AddBtn from "./buttons/Add-Btn"
 
 const Nav = styled.div`
   height: 8vh;
@@ -49,32 +51,6 @@ const RightSec = styled(RightDiv)`
   }
 `
 
-const AddBtn = styled.button`
-  font-size: 12px;
-  background-color: red;
-  color: white;
-  padding: 8px 32px;
-  border-radius: 4px;
-  border: none;
-
-  &:hover {
-    background-color: white;
-    color: red;
-  }
-
-  @media (max-width: 414px) {
-    display: none;
-  }
-`
-const SignOutBtn = styled(AddBtn)`
-  background-color: rgba(0,0,200,1);
-  padding: 8px 16px;
-  &:hover {
-    background-color: white;
-    color: blue;
-  }
-`
-
 const Navbar = () => {
   return (
   	<Nav>
@@ -85,10 +61,8 @@ const Navbar = () => {
     		</Logo>
     		<RightDiv>
           <RightSec>
-            <Link to="/new-project">
-      			   <AddBtn>NEW PROJECT</AddBtn>
-            </Link>
-      			<SignOutBtn>SIGN OUT</SignOutBtn>
+            <AddBtn />
+      			<AuthBtn />
           </RightSec>
     		</RightDiv>
         <BurgerMenu />
