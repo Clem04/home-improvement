@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import BurgerMenu from "./Burger-Menu"
+import AuthBtn from "./buttons/Auth-Btn"
 import { Link } from "gatsby"
 
 const Nav = styled.div`
@@ -66,14 +67,6 @@ const AddBtn = styled.button`
     display: none;
   }
 `
-const SignOutBtn = styled(AddBtn)`
-  background-color: rgba(0,0,200,1);
-  padding: 8px 16px;
-  &:hover {
-    background-color: white;
-    color: blue;
-  }
-`
 
 const Navbar = () => {
   return (
@@ -88,7 +81,7 @@ const Navbar = () => {
             <Link to="/new-project">
       			   <AddBtn>NEW PROJECT</AddBtn>
             </Link>
-      			<SignOutBtn>SIGN OUT</SignOutBtn>
+      			<AuthBtn />
           </RightSec>
     		</RightDiv>
         <BurgerMenu />
