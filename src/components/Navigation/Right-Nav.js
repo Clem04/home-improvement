@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from "gatsby"
 import styled from "styled-components"
 
+import AuthBtn from "../Buttons/Auth-Btn"
+import AddBtn from "../Buttons/Add-Btn"
+
 const Ul = styled.ul`
   display: none;
 
@@ -30,11 +33,11 @@ const RightNav = ({ open }) => {
 		<>
 			<Ul open={open}>
 				<li>
-					<Link to="/new-project">
-			            <h2 style={{color: "white"}}>New Project</h2>
-			        </Link>
+					<AddBtn />
 				</li>
-				<li><h2>Sign Out</h2></li>
+				<li>
+          <AuthBtn />
+        </li>
 			</Ul>
 		</>
 	);
