@@ -4,8 +4,7 @@ import { FiClock } from "react-icons/fi";
 import { FiUser } from "react-icons/fi";
 
 import styles from './Card.module.css'
-import CompletedBtn from '../buttons/Completed-Btn'
-import StartedBtn from '../buttons/Started-Btn'
+import StatusBtn from '../buttons/Status-Btn'
 import EditDeleteBtn from '../buttons/Edit-Delete-Btn'
 
 const Card = styled.div`
@@ -70,16 +69,14 @@ const ProjectDescription = styled(ProjectTitle)`
 
 const ProjectCard = ({title, client, date, description, completed, estimate, actual}) => {
 
-  const statusBtn = () => {
-    if(completed === true){
-
-      return <CompletedBtn />
-    } else{
-
-      return <StartedBtn />
-    }
+  let status;
+  if (!!completed) {
+    status = <StatusBtn text={"COMPLETED"} color={completed}/>
   }
-
+  else {
+    status = <StatusBtn text={"STARTED"} color={completed}/>
+  }
+  
   return (
     <Card>
       <Container>
@@ -103,7 +100,7 @@ const ProjectCard = ({title, client, date, description, completed, estimate, act
             <p style={{textAlign: "left"}}>{description}</p>
           </ProjectText>
           <ProjectLevelOfEffort>
-            <div style={{width: "100%"}}>{statusBtn()}</div>
+            <div style={{width: "100%"}}>{status}</div>
             <div style={{width: "100%", backgroundColor: "#e0e0e0", 
                         marginTop: "16px", display: "flex"}}>
               <EstimateBox>
