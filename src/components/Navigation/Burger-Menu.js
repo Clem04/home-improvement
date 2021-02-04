@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import styled from "styled-components"
 
-import { FiAlignCenter } from "react-icons/fi";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAlignRight } from "@fortawesome/free-solid-svg-icons";
 import RightNav from './Right-Nav'
 
 const BurgerIcon = styled.div`
@@ -11,8 +12,8 @@ const BurgerIcon = styled.div`
     display: flex;
     width: 42px;
     position: fixed;
-    top: 8px;
-    right: 16px;
+    top: 12px;
+    right: 8px;
   }
 `
 
@@ -23,7 +24,7 @@ const BurgerMenu = () => {
 	return (
 		<>
 			<BurgerIcon open={open} onClick={() => setOpen(!open)}>
-				<FiAlignCenter size="2x" />
+				<FontAwesomeIcon icon={faAlignRight} size="2x" />
 			</BurgerIcon>
 			<RightNav open={open} />
 		</>
