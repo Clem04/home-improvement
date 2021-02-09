@@ -21,7 +21,7 @@ a {
   content: '';
   display: block;
   width: 100%;
-  border-bottom: 6px solid red;
+  border-bottom: 4px solid red;
   background: red;
   border-radius: 8px;
   margin-top: 8px;
