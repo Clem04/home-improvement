@@ -2,29 +2,28 @@
   width: 100%;
   display: flex;
   justify-content: space-around;
-  border-bottom: 2px solid blue;
+  position: relative;
   list-style-type: none;
-  padding: 0;
+  padding: 14px 32px;
 }
 
-.tabs > li {
-  width:calc(100% / 2);
-  font-size: 20px;
-  text-align: center;
-  padding: 0 0 10px 0;
-}
-
-.current {
+.tabs .activeTab {
+  color:red;
   font-weight: bold;
-  border-bottom: 6px solid red;
-  /*position: relative;*/
-  /*top: 6px;*/
 }
 
-.current > a {
-  color: red;
+a {
+  text-decoration: none;
 }
 
-a:-webkit-any-link {
-    text-decoration: none;
+
+.activeTab::after {
+  content: '';
+  display: block;
+  width: 100%;
+  border-bottom: 4px solid red;
+  background: red;
+  border-radius: 8px;
+  margin-top: 8px;
 }
+
