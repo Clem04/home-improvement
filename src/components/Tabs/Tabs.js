@@ -27,6 +27,13 @@ const ContentDiv = styled.div`
   }
 `;
 
+const TabLink = styled.a`
+  width:calc(100% / 2);
+  font-size: 20px;
+  color: blue;
+  text-decoration: none;
+`;
+
 
 const Tabs = ({ children }) => {
 
@@ -37,6 +44,25 @@ const Tabs = ({ children }) => {
     setActiveTab(newActiveTab);
   }
 
+  // const tabLabel = children.map((tab) => (
+  //   <li className={tab.props.label === activeTab ? styles.activeTab : styles.tabList} 
+  //   key={tab.props.label}>
+
+  //     <a href="#" 
+  //       className={styles.activeLink}
+  //       onClick={(e) => handleClick(e, tab.props.label)}>{tab.props.label}</a>
+  //   </li>
+  // ))
+
+  const tabLabel = children.map((tab) => (
+      <TabLink href="#" 
+        key={tab.props.label}
+        className={styles.link,  
+          tab.props.label === activeTab ? 
+          styles.activeTab : ""}
+        onClick={(e) => handleClick(e, tab.props.label)}>{tab.props.label}</TabLink>
+  ))
+
   const contentTab = children.map((child) => {
     if (child.props.label === activeTab)
       return (
@@ -46,20 +72,12 @@ const Tabs = ({ children }) => {
     );
   })
 
-  const tabLabel = children.map((tab) => (
-    <li className={tab.props.label === activeTab ? styles.current : ""} 
-    key={tab.props.label}>
-
-      <a href="#" onClick={(e) => handleClick(e, tab.props.label)}>{tab.props.label}</a>
-      
-    </li>
-  ))
 
   return(
   	<ListsContainer>
-	    <ul className={styles.tabs}>
+	    <nav className={styles.tabs}>
         {tabLabel}
-	    </ul>
+	    </nav>
 
       {contentTab}
   	</ListsContainer>
