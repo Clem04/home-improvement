@@ -170,10 +170,10 @@ const ProjectsList = () => {
   return (
   	<GridList>
       <Tabs>
-        <Tab label="STARTED">
+        <Tab label="started">
           {startedList}
         </Tab>
-        <Tab label="COMPLETED">
+        <Tab label="completed">
           {completedList}
         </Tab>
       </Tabs>

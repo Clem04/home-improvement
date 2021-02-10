@@ -18,7 +18,7 @@ const ListsContainer = styled.div`
 const ContentDiv = styled.div`
   width: 100%;
   min-height: 30vh;
-  padding: 8px 32px;
+  padding: 24px 0px;
   display: grid;
   grid-template-rows: ;
   row-gap: 16px;
@@ -27,12 +27,12 @@ const ContentDiv = styled.div`
   }
 `;
 
-const TabLink = styled.a`
-  width:calc(100% / 2);
-  font-size: 20px;
-  color: blue;
-  text-decoration: none;
-`;
+// const TabLink = styled.a`
+//   width:calc(100% / 2);
+//   font-size: 20px;
+//   color: blue;
+//   text-decoration: none;
+// `;
 
 
 const Tabs = ({ children }) => {
@@ -55,12 +55,12 @@ const Tabs = ({ children }) => {
   // ))
 
   const tabLabel = children.map((tab) => (
-      <TabLink href="#" 
+      <a href="/#" 
         key={tab.props.label}
-        className={styles.link,  
-          tab.props.label === activeTab ? 
-          styles.activeTab : ""}
-        onClick={(e) => handleClick(e, tab.props.label)}>{tab.props.label}</TabLink>
+        className={`styles.link 
+          ${tab.props.label === activeTab ? 
+          styles.activeTab : ""}`}
+        onClick={(e) => handleClick(e, tab.props.label)}>{tab.props.label}</a>
   ))
 
   const contentTab = children.map((child) => {
@@ -70,13 +70,14 @@ const Tabs = ({ children }) => {
           {child.props.children}
         </ContentDiv>
     );
-  })
 
+  })
 
   return(
   	<ListsContainer>
 	    <nav className={styles.tabs}>
         {tabLabel}
+        <div className={styles.indicator}></div>
 	    </nav>
 
       {contentTab}
